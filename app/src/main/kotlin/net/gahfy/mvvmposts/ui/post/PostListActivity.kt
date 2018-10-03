@@ -15,7 +15,7 @@ import net.gahfy.mvvmposts.injection.ViewModelFactory
 class PostListActivity: AppCompatActivity() {
     private lateinit var binding: ActivityPostListBinding
     private lateinit var viewModel: PostListViewModel
-    private var errorSnackbar: Snackbar? = null
+    private var errorSandbar: Snackbar? = null
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -31,14 +31,14 @@ class PostListActivity: AppCompatActivity() {
     }
 
     private fun showError(@StringRes errorMessage:Int){
-        errorSnackbar = Snackbar.make(binding.root, errorMessage, Snackbar.LENGTH_INDEFINITE)
-        errorSnackbar?.setAction(R.string.retry, viewModel.errorClickListener)
-        errorSnackbar?.show()
+        errorSandbar = Snackbar.make(binding.root, errorMessage, Snackbar.LENGTH_INDEFINITE)
+        errorSandbar?.setAction(R.string.retry, viewModel.errorClickListener)
+        errorSandbar?.show()
     }
 
 
     //asda asd
     private fun hideError(){
-        errorSnackbar?.dismiss()
+        errorSandbar?.dismiss()
     }
 }
