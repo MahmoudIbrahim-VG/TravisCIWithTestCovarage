@@ -76,6 +76,8 @@ dependencies {
 
 }
 
+
+
 project.afterEvaluate {
     //Gather build type and product flavor names in a list
     def buildTypes = android.buildTypes.collect { type -> type.name }
