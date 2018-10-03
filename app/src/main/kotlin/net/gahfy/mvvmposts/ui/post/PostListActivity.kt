@@ -36,6 +36,8 @@ class PostListActivity: AppCompatActivity() {
         errorSnackbar?.show()
     }
 
+
+    //asda asd
     private fun hideError(){
         errorSnackbar?.dismiss()
     }
