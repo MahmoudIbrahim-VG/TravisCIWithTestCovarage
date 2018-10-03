@@ -5,16 +5,30 @@ sudo: false
 android:
   components:
     - android-28
+    - tools
+    - platform-tools
     - build-tools-27.0.3
-
+    - android-23
+    - extra-android-m2repository
+    - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
 env:
   global:
    # install timeout in minutes (2 minutes by default)
-    - ADB_INSTALL_TIMEOUT=8
-    - CODECOV_TOKEN = "47e1fc98-666e-4b5c-be73-9633198664c0"
+   - ANDROID_TARGET=android-27
+   - ANDROID_ABI=armeabi-v7a
+
 
 # Run assemble, unit tests, and create coverage report
 script:
+ - ./gradlew build jacocoTestReport assembleAndroidTest
+  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
+  - ./gradlew connectedCheck
+
+  after_success:
+    - bash <(curl -s https://codecov.io/bash)
 #  - ./gradlew clean assembleDebug assembleRelease testDebug createDebugUnitTestCoverageReport
 #  # Renaming folder and files of reports so codecov.io can find it
 #  - mv app/build/reports/jacoco/createDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDebugUnitTestReport
