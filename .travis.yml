@@ -11,6 +11,7 @@ env:
   global:
    # install timeout in minutes (2 minutes by default)
     - ADB_INSTALL_TIMEOUT=8
+    - CODECOV_TOKEN = "47e1fc98-666e-4b5c-be73-9633198664c0"
 
 # Run assemble, unit tests, and create coverage report
 script:
