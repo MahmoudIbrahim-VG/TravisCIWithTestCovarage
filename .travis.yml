@@ -1,8 +1,15 @@
+sudo: false
 language: android
+jdk: oraclejdk8
 android:
   components:
     - android-28
     - build-tools-27.0.3
+
+cache:
+ directories:
+ - $HOME/.gradle/caches/
+ - $HOME/.gradle/wrapper/
 
 env:
   global:
@@ -11,12 +18,16 @@ env:
 
 # Run assemble, unit tests, and create coverage report
 script:
-  - ./gradlew clean assembleDebug assembleRelease testDebug createDebugUnitTestCoverageReport
-  # Renaming folder and files of reports so codecov.io can find it
-  - mv app/build/reports/jacoco/createDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDebugUnitTestReport
-  - mv app/build/reports/jacoco/jacocoTestDebugUnitTestReport/createDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml
-  # Codecov.io
-  - bash <(curl -s https://codecov.io/bash)
+   - ./gradlew clean
+   - ./gradlew assembleDebug
+   - ./gradlew assembleDebugAndroidTest
+
+#  - ./gradlew clean assembleDebug assembleRelease testDebug createDebugUnitTestCoverageReport
+#  # Renaming folder and files of reports so codecov.io can find it
+#  - mv app/build/reports/jacoco/createDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDebugUnitTestReport
+#  - mv app/build/reports/jacoco/jacocoTestDebugUnitTestReport/createDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml
+#  # Codecov.io
+#  - bash <(curl -s https://codecov.io/bash)
 
 
 
