@@ -114,8 +114,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="122" column="48" lean-forward="false" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+            <state relative-caret-position="236">
+              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="1" selection-end-line="146" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -2961,7 +2961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538643389300</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="sdasdas asd">
+      <created>1538643801591</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1538643801591</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3276,8 +3283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="122" column="48" lean-forward="false" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+        <state relative-caret-position="236">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="1" selection-end-line="146" selection-end-column="34" />
           <folding />
         </state>
       </provider>
