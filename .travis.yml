@@ -104,11 +104,9 @@
 #          - chmod +x gradlew
 
 language : android
-sudo : required
-jdk : oraclejdk8
 env:
   global :
-    - ANROID_API_LEVEL = "27"
+    - ANROID_API_LEVEL = "26"
 
 #android :
 #  components :
