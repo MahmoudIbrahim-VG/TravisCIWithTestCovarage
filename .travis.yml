@@ -109,20 +109,32 @@ jdk : oraclejdk8
 env:
   global :
     - ANROID_API_LEVEL = "27"
-android :
-  components :
-    - tools
-    - platform-tools
-    - tools
-    - android - $ANDROID_API_LEVEL
-    - extra-google-google_play_services
-    - extra-google-m2repository
-    - addon-google_apis-google-$ANDROID_API_LEVEL
-  licences :
-    - 'android-sdk-preview-license-.+'
+
+#android :
+#  components :
+#    - tools
+#    - platform-tools
+#    - tools
+#    - android - $ANDROID_API_LEVEL
+#    - extra-google-google_play_services
+#    - extra-google-m2repository
+#    - addon-google_apis-google-$ANDROID_API_LEVEL
+#  licences :
+#    - 'android-sdk-preview-license-.+'
+#    - 'android-sdk-license-.+'
+#    - 'google-gdk-license-.+'
+
+android:
+  components:
+    - build-tools-26.0.2
+    - android-26
+    - sys-img-armeabi-v7a-android-tv-l
+    - add-on
+    - extra
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
-
 
 before_script :
 #        - mkdir -p "$ANDROID_HOME/licenses"
