@@ -7,33 +7,33 @@ env:
     - EMULATOR_API_LEVEL=26
 
 
-#android :
-#  components :
-#    - tools
-#    - platform-tools
-#    - tools
-#    - android - $ANDROID_API_LEVEL
-#    - extra-google-google_play_services
-#    - extra-google-m2repository
-#    - addon-google_apis-google-$ANDROID_API_LEVEL
-#  licences :
-#    - 'android-sdk-preview-license-.+'
-#    - 'android-sdk-license-.+'
-#    - 'google-gdk-license-.+'
-
-android:
-  components:
-    - build-tools-27.1.1
-    - android-27
-    - sys-img-armeabi-v7a-android-tv-l
-    - add-on
-    - extra
-
-  licenses:
-    - 'android-sdk-preview-license-52d11cd2'
+android :
+  components :
+    - tools
+    - platform-tools
+    - tools
+    - android - $ANDROID_API_LEVEL
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - addon-google_apis-google-$ANDROID_API_LEVEL
+  licences :
+    - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
 
+#android:
+#  components:
+#    - build-tools-27.1.1
+#    - android-27
+#    - sys-img-armeabi-v7a-android-tv-l
+#    - add-on
+#    - extra
+#
+#  licenses:
+#    - 'android-sdk-preview-license-52d11cd2'
+#    - 'android-sdk-license-.+'
+#    - 'google-gdk-license-.+'
+#
 
 
 
@@ -142,14 +142,14 @@ android:
 #          - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 #          - chmod +x gradlew
 
-language : android
-sudo: false
-
-env:
-  global :
-    - ANROID_API_LEVEL = "27"
-    - EMULATOR_API_LEVEL=26
-
+#language : android
+#sudo: false
+#
+#env:
+#  global :
+#    - ANROID_API_LEVEL = "27"
+#    - EMULATOR_API_LEVEL=26
+#
 
 #android :
 #  components :
@@ -165,18 +165,18 @@ env:
 #    - 'android-sdk-license-.+'
 #    - 'google-gdk-license-.+'
 
-android:
-  components:
-    - build-tools-27.1.1
-    - android-27
-    - sys-img-armeabi-v7a-android-tv-l
-    - add-on
-    - extra
-
-  licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+#android:
+#  components:
+#    - build-tools-27.1.1
+#    - android-27
+#    - sys-img-armeabi-v7a-android-tv-l
+#    - add-on
+#    - extra
+#
+#  licenses:
+#    - 'android-sdk-preview-license-52d11cd2'
+#    - 'android-sdk-license-.+'
+#    - 'google-gdk-license-.+'
 
 # Emulator Management: Create, Start and Wait
 #before_script:
