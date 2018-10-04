@@ -30,8 +30,8 @@ before_install:
 
 # Run assemble, unit tests, and create coverage report
 script:
-   - ./gradlew clean
-   - ./gradlew assembleDebug
+#   - ./gradlew clean
+#   - ./gradlew assembleDebug
    - ./gradlew assembleDebugAndroidTest
 
 #  - ./gradlew clean assembleDebug assembleRelease testDebug createDebugUnitTestCoverageReport
