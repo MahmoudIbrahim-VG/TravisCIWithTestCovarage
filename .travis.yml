@@ -30,9 +30,10 @@ before_install:
 
 # Run assemble, unit tests, and create coverage report
 script:
-#   - ./gradlew clean
+   - ./gradlew clean
+   - ./gradlew build
 #   - ./gradlew assembleDebug
-   - ./gradlew assembleDebugAndroidTest
+#   - ./gradlew assembleDebugAndroidTest
 
 #  - ./gradlew clean assembleDebug assembleRelease testDebug createDebugUnitTestCoverageReport
 #  # Renaming folder and files of reports so codecov.io can find it
